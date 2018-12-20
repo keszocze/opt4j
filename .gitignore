@@ -9,3 +9,6 @@ build
 .classpath
 .project
 .settings
+
+# Ignore files setup by Jetbrains Idea IDE
+.idea
