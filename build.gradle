@@ -1,3 +1,13 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    }
+}
+
+
 plugins {
 	id 'com.github.kt3k.coveralls' version '2.6.3'
 }
@@ -5,8 +15,16 @@ apply plugin: 'base'
 apply plugin: 'application'
 apply plugin: 'eclipse'
 apply plugin: 'jacoco'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 mainClassName = 'org.opt4j.core.start.Opt4J'
+
+
+
+
+
+
+
 
 /*
  * Gets the version name from the latest Git tag
@@ -198,6 +216,12 @@ boolean isSnapshot() {
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
+
+shadowJar {
+    baseName = 'shadow'
+    classifier = null
+    version = null
+}
 
 task copyWebsite(type: Copy){
 	from('src/main/website/') {
