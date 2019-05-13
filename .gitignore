@@ -14,3 +14,5 @@ build
 .idea
 or
 *.class
+opt4j-core/out/
+opt4j-viewer/out/
