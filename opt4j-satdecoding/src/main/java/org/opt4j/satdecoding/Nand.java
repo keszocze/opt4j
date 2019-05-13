@@ -7,8 +7,6 @@ public class Nand  extends Clause {
     public Nand(Literal a, Literal b) {
         add(a.negate());
         add(b.negate());
-        System.out.println("nand rhs: "+rhs);
-        System.out.println("nand op: "+operator);
     }
 
     public Nand(Collection<Literal> vars) {

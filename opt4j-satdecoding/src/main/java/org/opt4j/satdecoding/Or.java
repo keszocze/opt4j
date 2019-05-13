@@ -13,6 +13,5 @@ public class Or extends Clause {
     public Or(Literal a, Literal b) {
         add(a);
         add(b);
-        System.out.println(rhs);
     }
 }

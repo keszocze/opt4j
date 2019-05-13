@@ -4,15 +4,11 @@ public class Implies extends Clause {
     public Implies(Literal a, Literal b) {
         add(a.negate());
         add(b);
-        System.out.println("implies rhs: "+rhs);
-        System.out.println("implies op: "+operator);
     }
 
     public Implies(Literal a1, Literal a2, Literal b) {
         add(a1.negate());
         add(a2.negate());
         add(b);
-        System.out.println("implies rhs: "+rhs);
-        System.out.println("implies op: "+operator);
     }
 }
